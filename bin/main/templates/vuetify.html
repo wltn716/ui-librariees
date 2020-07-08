@@ -1,0 +1,327 @@
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link href="/css/app/vuetify.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+    <div id="app">
+        <v-app id="inspire">
+
+            <div>
+                <v-app-bar
+                  color="transparent accent-4"
+                  dense
+                  flat
+                >
+                  <v-app-bar-nav-icon></v-app-bar-nav-icon>
+            
+                  <v-toolbar-title>Page title</v-toolbar-title>
+            
+                  <v-spacer></v-spacer>
+            
+                  <v-btn icon>
+                    <v-icon>mdi-heart</v-icon>
+                  </v-btn>
+            
+                  <v-btn icon>
+                    <v-icon>mdi-magnify</v-icon>
+                  </v-btn>
+            
+                  <v-menu
+                    left
+                    bottom
+                  >
+                    <template v-slot:activator="{ on, attrs }">
+                      <v-btn
+                        icon
+                        v-bind="attrs"
+                        v-on="on"
+                      >
+                        <v-icon>mdi-dots-vertical</v-icon>
+                      </v-btn>
+                    </template>
+            
+                    <v-list>
+                      <v-list-item
+                        v-for="n in 5"
+                        :key="n"
+                        @click="() => {}"
+                      >
+                        <v-list-item-title></v-list-item-title>
+                      </v-list-item>
+                    </v-list>
+                  </v-menu>
+                </v-app-bar>
+              </div>
+
+
+            <v-row no-gutters>
+                <v-col
+                    cols="12"
+                    md="12"
+                    lg="4"
+                    class="pa-5"
+                >
+                    <v-card
+                        class="mx-auto mt-4"
+                        width="100%"
+                    >
+                        <v-sheet
+                            class="v-sheet--offset mx-auto"
+                            color="green"
+                            elevation="12"
+                            max-width="calc(100% - 20px)"
+                        >
+                        <v-sparkline
+                            :labels="labels1"
+                            :value="value1"
+                            color="white"
+                            line-width="2"
+                            padding="16"
+                        ></v-sparkline>
+                        </v-sheet>
+                    
+                        <v-card-text class="pt-0">
+                            <div class="title font-weight-light mb-2">User Registrations</div>
+                            <div class="subheading font-weight-light grey--text">Last Campaign Performance</div>
+                            <v-divider class="my-2"></v-divider>
+                            <v-icon
+                                class="mr-2"
+                                small
+                            >
+                            mdi-clock
+                            </v-icon>
+                            <span class="caption grey--text font-weight-light">last registration 26 minutes ago</span>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+                <v-col
+                    cols="12"
+                    md="12"
+                    lg="4"
+                    class="pa-5"
+                >    
+                    <v-card
+                        class="mx-auto mt-4"
+                        width="100%"
+                    >
+                        <v-sheet
+                            class="v-sheet--offset mx-auto"
+                            color="cyan"
+                            elevation="12"
+                            max-width="calc(100% - 20px)"
+                        >
+                        <v-sparkline
+                            :labels="labels2"
+                            :value="value2"
+                            color="white"
+                            line-width="2"
+                            padding="16"
+                        ></v-sparkline>
+                        </v-sheet>
+                    
+                        <v-card-text class="pt-0">
+                            <div class="title font-weight-light mb-2">User Registrations</div>
+                            <div class="subheading font-weight-light grey--text">Last Campaign Performance</div>
+                            <v-divider class="my-2"></v-divider>
+                            <v-icon
+                                class="mr-2"
+                                small
+                            >
+                            mdi-clock
+                            </v-icon>
+                            <span class="caption grey--text font-weight-light">last registration 26 minutes ago</span>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+                
+                <v-col
+                    cols="12"
+                    md="12"
+                    lg="4"
+                    class="pa-5"
+                >    
+                    <v-card
+                        class="mx-auto mt-4"
+                        width="100%"
+                    >
+                        <v-sheet
+                            class="v-sheet--offset mx-auto"
+                            color="orange"
+                            elevation="12"
+                            max-width="calc(100% - 20px)"
+                        >
+                        <v-sparkline
+                            :labels="labels2"
+                            :value="value2"
+                            type="bar"
+                            color="white"
+                            line-width="2"
+                            padding="16"
+                        ></v-sparkline>
+                        </v-sheet>
+                    
+                        <v-card-text class="pt-0">
+                            <div class="title font-weight-light mb-2">User Registrations</div>
+                            <div class="subheading font-weight-light grey--text">Last Campaign Performance</div>
+                            <v-divider class="my-2"></v-divider>
+                            <v-icon
+                                class="mr-2"
+                                small
+                            >
+                            mdi-clock
+                            </v-icon>
+                            <span class="caption grey--text font-weight-light">last registration 26 minutes ago</span>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+                <v-col
+                    cols="12"
+                    md="6"
+                    lg="3"
+                    class="pa-5"
+                > 
+                    <v-card
+                        class="mx-auto mt-4"
+                        width="100%"
+                    >
+                        <v-sheet
+                            class="v-sheet---offset"
+                            color="yellow"
+                            elevation="12"
+                            width="100"
+                            height="100"
+                        >
+                            
+                        </v-sheet>
+                    
+                        <v-card-text class="pt-0">
+                            <div class="title font-weight-light mb-2">User Registrations</div>
+                            <div class="subheading font-weight-light grey--text">Last Campaign Performance</div>
+                            <v-divider class="my-2"></v-divider>
+                            <v-icon
+                                class="mr-2"
+                                small
+                            >
+                            mdi-clock
+                            </v-icon>
+                            <span class="caption grey--text font-weight-light">last registration 26 minutes ago</span>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+                <v-col
+                    cols="12"
+                    md="6"
+                    lg="3"
+                    class="pa-5"
+                > 
+                    <v-card
+                        class="mx-auto mt-4"
+                        width="100%"
+                    >
+                        <v-sheet
+                            class="v-sheet---offset"
+                            color="yellow"
+                            elevation="12"
+                            width="100"
+                            height="100"
+                        >
+                            
+                        </v-sheet>
+                    
+                        <v-card-text class="pt-0">
+                            <div class="title font-weight-light mb-2">User Registrations</div>
+                            <div class="subheading font-weight-light grey--text">Last Campaign Performance</div>
+                            <v-divider class="my-2"></v-divider>
+                            <v-icon
+                                class="mr-2"
+                                small
+                            >
+                            mdi-clock
+                            </v-icon>
+                            <span class="caption grey--text font-weight-light">last registration 26 minutes ago</span>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+                <v-col
+                    cols="12"
+                    md="6"
+                    lg="3"
+                    class="pa-5"
+                > 
+                    <v-card
+                        class="mx-auto mt-4"
+                        width="100%"
+                    >
+                        <v-sheet
+                            class="v-sheet---offset"
+                            color="yellow"
+                            elevation="12"
+                            width="100"
+                            height="100"
+                        >
+                            
+                        </v-sheet>
+                    
+                        <v-card-text class="pt-0">
+                            <div class="title font-weight-light mb-2">User Registrations</div>
+                            <div class="subheading font-weight-light grey--text">Last Campaign Performance</div>
+                            <v-divider class="my-2"></v-divider>
+                            <v-icon
+                                class="mr-2"
+                                small
+                            >
+                            mdi-clock
+                            </v-icon>
+                            <span class="caption grey--text font-weight-light">last registration 26 minutes ago</span>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+                <v-col
+                    cols="12"
+                    md="6"
+                    lg="3"
+                    class="pa-5"
+                > 
+                    <v-card
+                        class="mx-auto mt-4"
+                        width="100%"
+                    >
+                        <v-sheet
+                            class="v-sheet---offset"
+                            color="yellow"
+                            elevation="12"
+                            width="100"
+                            height="100"
+                        >
+                            
+                        </v-sheet>
+                    
+                        <v-card-text class="pt-0">
+                            <div class="title font-weight-light mb-2">User Registrations</div>
+                            <div class="subheading font-weight-light grey--text">Last Campaign Performance</div>
+                            <v-divider class="my-2"></v-divider>
+                            <v-icon
+                                class="mr-2"
+                                small
+                            >
+                            mdi-clock
+                            </v-icon>
+                            <span class="caption grey--text font-weight-light">last registration 26 minutes ago</span>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+            </v-row>
+        </v-app>
+    </div>
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="/js/app/vuetify.js"></script>
+    
+</body>
+</html>

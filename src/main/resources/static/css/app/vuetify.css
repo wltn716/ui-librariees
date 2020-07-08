@@ -1,0 +1,10 @@
+.v-sheet--offset {
+    top: -24px;
+    position: relative;
+}
+
+.v-sheet---offset {
+    top: -24px;
+    left: 10px;
+    position: relative;
+}

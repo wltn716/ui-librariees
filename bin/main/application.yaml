@@ -1,0 +1,6 @@
+
+spring:
+  application:
+    name: ui-libraries
+  mustache:
+    suffix: .html
